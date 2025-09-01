@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
-
+import PurchaseManagement from './PurchaseGraph'
 const HeroSection = () => {
   return (
-    <section className="h-auto lg:h-screen flex flex-col lg:flex-row">
+    <section className="h-auto lg:h-screen flex flex-col lg:flex-row pl-20">
       {/* Left half */}
-      <div className="w-full lg:w-1/2 h-64 lg:h-full flex items-center justify-center">
+      <div className="w-full lg:w-1/2 h-64 lg:h-full flex items-center justify-start">
         <div className="text-left max-w-lg">
           {/* Headings */}
           <h1
@@ -36,21 +36,48 @@ const HeroSection = () => {
           >
             Contact <ArrowUpRight className="w-5 h-5" />
           </Button>
-
-
         </div>
       </div>
 
       {/* Right half */}
       <div
-        className="w-full lg:w-1/2 h-64 lg:h-full flex items-center justify-center"
+        className="w-full lg:w-1/2 h-64 lg:h-full flex flex-col items-center justify-center p-4 gap-4"
         style={{
           background: "radial-gradient(circle, #F6F7F8 0%, #EBF5FF 100%)",
         }}
       >
-        <h1 className="text-foreground dark:text-white text-3xl lg:text-5xl font-bold">
-          Right Side
-        </h1>
+        {/* Cards container */}
+        <div className="grid grid-cols-2 gap-8 w-full h-full">
+
+          <div
+            className="flex items-center justify-center bg-white rounded-2xl shadow-[0px_1.81px_5.42px_0px_rgba(13,10,44,0.08)]"
+            // style={{ height: "100%", minHeight: "120px" }}
+          >
+            <PurchaseManagement />
+          </div>
+
+          <div
+            className="flex items-center justify-center bg-white rounded-2xl shadow-[0px_1.81px_5.42px_0px_rgba(13,10,44,0.08)]"
+            // style={{ height: "100%", minHeight: "120px" }}
+          >
+            <PurchaseManagement />
+          </div>
+
+          <div
+            className="flex items-center justify-center bg-white rounded-2xl shadow-[0px_1.81px_5.42px_0px_rgba(13,10,44,0.08)]"
+            // style={{ height: "100%", minHeight: "120px" }}
+          >
+            <PurchaseManagement />
+          </div>
+
+          <div
+            className="flex items-center justify-center bg-white rounded-2xl shadow-[0px_1.81px_5.42px_0px_rgba(13,10,44,0.08)]"
+            // style={{ height: "100%", minHeight: "120px" }}
+          >
+            <PurchaseManagement />
+          </div>
+
+        </div>
       </div>
     </section>
   );
