@@ -42,34 +42,34 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section id="products" className="py-20 bg-gradient-to-br from-background to-secondary/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="products" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-background to-secondary/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-display-md xl:text-display-lg font-bold mb-4">
             Our <span className="text-primary">Products</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Modular and Platforms
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {products.map((product, index) => (
-            <Card key={index} className="p-8 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/20 group">
+            <Card key={index} className="p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/20 group">
               <div className="space-y-6">
                 <div className="relative">
-                  <div className={`w-20 h-20 bg-gradient-to-br ${product.gradient} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <product.icon className="w-10 h-10 text-white" />
+                  <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${product.gradient} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <product.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </div>
                   {/* Isometric effect */}
-                  <div className={`absolute -top-2 -right-2 w-20 h-20 bg-gradient-to-br ${product.gradient} opacity-20 rounded-2xl -z-10`}></div>
+                  <div className={`absolute -top-2 -right-2 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${product.gradient} opacity-20 rounded-2xl -z-10`}></div>
                 </div>
                 
                 <div className="space-y-3">
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                     {product.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {product.description}
                   </p>
                 </div>

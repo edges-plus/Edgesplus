@@ -36,23 +36,23 @@ const CoreValuesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section className="py-16 sm:py-20 lg:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-display-md xl:text-display-lg font-bold mb-4">
             Our Core <span className="text-primary">Values</span>
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {values.map((value, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20">
-              <div className="space-y-4">
+            <Card key={index} className="p-6 lg:p-8 hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20">
+              <div className="space-y-4 lg:space-y-6">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                   <value.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground">{value.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{value.description}</p>
               </div>
             </Card>
           ))}
