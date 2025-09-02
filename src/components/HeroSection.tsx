@@ -7,13 +7,13 @@ import StatisticsCard from './StatisticsCard'
 
 const HeroSection = () => {
   return (
-    <section className="h-auto lg:h-screen flex flex-col lg:flex-row pl-20">
+    <section className=" w-full h-auto lg:h-screen flex items-center justify-center flex-row lg:pl-20">
       {/* Left half */}
       <div className="w-full lg:w-1/2 h-64 lg:h-full flex items-center justify-start">
-        <div className="text-left max-w-lg ">
+        <div className="text-center lg:text-left max-w-lg ">
           {/* Headings */}
           <h1
-            className="text-4xl lg:text-6xl font-semibold leading-tight mb-4"
+            className="text-4xl lg:text-6xl font-semibold leading-tight lg:mb-4"
             style={{
               background: "linear-gradient(135deg, #3399FF, #0073E6)",
               WebkitBackgroundClip: "text",
@@ -35,23 +35,25 @@ const HeroSection = () => {
           </p>
 
           {/* Contact Button */}
-          <Button
-            className="bg-primary text-base text-white flex items-center gap-2 px-6 py-6 rounded-md transition-colors"
-          >
-            Contact <ArrowUpRight className="w-5 h-5" />
-          </Button>
+          {/* Contact Button */}
+          <div className="flex justify-center lg:justify-start">
+            <Button className="bg-primary text-base text-white flex items-center gap-2 px-6 py-6 rounded-md transition-colors">
+              Contact <ArrowUpRight className="w-5 h-5" />
+            </Button>
+          </div>
+
         </div>
       </div>
 
       {/* Right half */}
       <div
-        className="w-full lg:w-1/2 h-full lg:h-full rounded-2xl flex flex-col items-center justify-center p-4 gap-4 overflow-hidden bg-[radial-gradient(circle,rgba(246,247,248,0.4)_0%,rgba(235,245,255,1)_100%)] dark:bg-[radial-gradient(circle,rgba(12,26,39,0.4)_0%,rgba(12,26,39,08)_100%)]"
-       
+        className="hidden sm:block w-full lg:w-1/2 h-full lg:h-full rounded-2xl flex flex-col items-center justify-center p-4 gap-4 overflow-hidden bg-[radial-gradient(circle,rgba(246,247,248,0.4)_0%,rgba(235,245,255,1)_100%)] dark:bg-[radial-gradient(circle,rgba(12,26,39,0.4)_0%,rgba(12,26,39,08)_100%)]"
+
       >
         {/* Cards container */}
         {/* Cards container */}
         <div className="grid grid-cols-2 gap-6 flex items-center justify-center ">
-          {[PurchaseManagement,ViewsByCountryCard, StatisticsCard,MonthlyActivityCard].map(
+          {[PurchaseManagement, ViewsByCountryCard, StatisticsCard, MonthlyActivityCard].map(
             (Component, i) => (
               <div
                 key={i}
