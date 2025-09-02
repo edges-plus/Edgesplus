@@ -52,14 +52,14 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section id="products" className="py-16 sm:py-20 lg:py-16 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/20">
+    <section id="products" className="py-16 sm:py-20 lg:py-16 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/20 dark:bg-none">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-display-md xl:text-display-lg font-bold mb-4">
             Our <span className="text-primary">Products</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Modular and Platforms
+            Modular <span className="text-primary text-bold">ERP</span> Platforms
           </p>
         </div>
 

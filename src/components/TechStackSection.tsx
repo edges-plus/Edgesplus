@@ -13,7 +13,7 @@ const TechStackSection = () => {
   const technologies = [ReactLogo,PythonLogo,NodeLogo,PostGreLogo,MongoLogo,RLogo,FlutterLogo,FigmaLogo,RedisLogo];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-secondary/20">
+    <section className="py-16 sm:py-20 lg:py-24 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-18">
           <h2 className="text-3xl sm:text-4xl lg:text-display-md xl:text-display-lg font-bold mb-4">

@@ -53,19 +53,18 @@ const CoreValuesSection = () => {
           {values.map((value, index) => (
             <Card
               key={index}
-              className=" p-6 lg:p-8 hover:shadow-lg transition-all duration-300"
-              style={{
-                background: "linear-gradient(0deg, #EBF5FF66 40%, #F6F7F81A 10%)",
-                border: "1px solid #E8EAEE",
-                width: "26rem"
-              }}
+              className="
+    p-6 lg:p-8 hover:shadow-lg transition-all duration-300
+    border border-[#E8EAEE] dark:border-primary
+    w-[26rem] 
+    dark:bg-[linear-gradient(180deg,rgba(0,0,0,0.37)_0%,rgba(0,107,214,0.10)_100%)]
+    bg-[linear-gradient(0deg,rgba(235,245,255,0.4)_0%,rgba(246,247,248,0.1)_100%)]
+  "
             >
-
-
 
               <div className="space-y-4 lg:space-y-6">
                 <div className="w-12 h-12 bg-primary/10 rounded-full border border-primary flex items-center justify-center">
-                  <value.icon className="w-6 h-6 text-black" />
+                  <value.icon className="w-6 h-6 text-black dark:text-primary" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-foreground">{value.title}</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{value.description}</p>

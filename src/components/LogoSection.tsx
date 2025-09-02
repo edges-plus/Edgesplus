@@ -1,9 +1,27 @@
-
-import logo from "../../assets/Logo.png"; // <-- adjust path to your logo file
+import { useEffect, useState } from "react";
+import logoLight from "../../assets/Logo.png";      // Light mode logo
+import logoDark from "../../assets/LogoDark.png";   // Dark mode logo
+import { useTheme } from "next-themes";
 
 const LogoSection = () => {
-  // Array to repeat logo 4 times
-  const logos = Array(4).fill(logo);
+  const [isDark, setIsDark] = useState(false);
+const theme = useTheme();
+  useEffect(() => {
+    const checkTheme = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+
+    // Initial check
+    checkTheme();
+
+    // Listen for changes in dark mode
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const logos = Array(4).fill(isDark ? logoDark : logoLight);
 
   return (
     <section className="py-12 sm:py-16 bg-background">

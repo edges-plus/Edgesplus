@@ -41,7 +41,7 @@ const PurchaseManagement = () => {
   }, []);
 
   return (
-    <Card className="w-72 p-4 bg-gradient-to-br from-background to-chart-bg shadow-[var(--shadow-card)] border-0">
+    <Card className="w-72 p-4  shadow-[var(--shadow-card)] border-0">
       <div
         className={`space-y-4 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
       >

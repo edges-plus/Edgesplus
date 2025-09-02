@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const BuildEdgeSection = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-secondary/30">
+    <section className="py-16 sm:py-20 lg:py-24 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           <div className="space-y-6 lg:space-y-8">
