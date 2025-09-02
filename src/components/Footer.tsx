@@ -16,16 +16,16 @@ const Footer = () => {
   }, [theme]);
   const navigationLinks = {
     column1: [
-      { name: 'Home', href: '#' },
-      { name: 'Products', href: '#' }
+      { name: 'Home', href: '/' },
+      { name: 'Products', href: '/page-not-foud' }
     ],
     column2: [
-      { name: 'Service', href: '#' },
-      { name: 'Careers', href: '#' },
+      { name: 'Service', href: '/page-not-foud' },
+      { name: 'Careers', href: '/page-not-foud' },
     ],
     column3: [
-      { name: 'About Us', href: '#' },
-      { name: 'Contact Us', href: '#' },
+      { name: 'About Us', href: '/page-not-foud' },
+      { name: 'Contact Us', href: '/page-not-foud' },
     ],
   };
 
