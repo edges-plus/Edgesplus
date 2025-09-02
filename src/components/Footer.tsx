@@ -1,10 +1,20 @@
-import { FaFacebook,FaLinkedin } from "react-icons/fa";
-import { FaInstagram,FaXTwitter } from "react-icons/fa6";
-
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import LogoDark from '../../assets/LogoDark.png';
 import Logo from "../../assets/Logo.png"
+import { useTheme } from "@/contexts/ThemeContext";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
-   const navigationLinks = {
+  const { theme, setTheme } = useTheme();
+    const [isDark, setIsDark] = useState(false);
+  
+  useEffect(() => {
+    setIsDark(
+      theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    );
+  }, [theme]);
+  const navigationLinks = {
     column1: [
       { name: 'Home', href: '#' },
       { name: 'Products', href: '#' }
@@ -33,7 +43,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src={Logo} alt="Edges+ Logo" className=''/>
+              <img src={isDark ? LogoDark : Logo} alt="Edges+ Logo" />
             </div>
             <p className="text-footer-muted max-w-md leading-relaxed ml-2">
               Empower your enterprise with Edges+'s smart Solution, designed to simplify
