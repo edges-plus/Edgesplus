@@ -67,7 +67,7 @@ const ProductsSection = () => {
           {products.map((product, index) => (
             <Card
               key={index}
-              className="flex flex-col justify-between px-6 pt-6 pb-0 sm:px-8 sm:pt-8 sm:pb-0 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/20 group"
+              className="flex flex-col bg-transparent justify-between px-6 pt-6 pb-0 sm:px-8 sm:pt-8 sm:pb-0 hover:shadow-xl transition-all duration-300 border-[#E8EAEE] dark:border-primary hover:border-primary/20 group"
             >
               {/* Top icon */}
               <div className="relative">

@@ -22,9 +22,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-            <Route path="/chart" element={<PurchaseManagement />} />
-
+            <Route path="/page-not-foud" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
