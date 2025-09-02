@@ -12,7 +12,10 @@ All colors MUST be HSL.
     --foreground: 244.9°, 100, 61.4;
     --chart-primary: 244.9, 100%, 61.4%;
     --chart-secondary: 274 87% 81%;
-    --chart-bg: 246 247 248;
+    --chart-bg: 246, 247, 248;
+    --chart-2: 270, 100%, 59%;
+    --chart-3: 268, 92%, 88%;
+    --chart-4: 228 94% 88%;
     /* light background for chart container */
 
     /* Shadow for bars */
@@ -59,6 +62,7 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --button-color: 210, 100%, 42%
   }
 
   .dark {
@@ -67,7 +71,8 @@ All colors MUST be HSL.
     --chart-primary: 244.9, 100%, 61.4%;
     --chart-secondary: 274 87% 81%;
     --chart-bg: 246 247 248;
-    
+    --chart-3: 268 92% 88%;
+    --chart-4: 228 94% 88%;
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
