@@ -1,80 +1,90 @@
 import { Card } from "@/components/ui/card";
-import { Package, DollarSign, Users, Warehouse, User, BarChart3 } from "lucide-react";
+import { BarChart3 } from "lucide-react";
+import { TbShoppingCartCopy } from "react-icons/tb";
+import { TbUsersGroup } from "react-icons/tb";
+import { FaCalculator } from "react-icons/fa6";
+import { VscGraph } from "react-icons/vsc";
+import { TbBuildingWarehouse } from "react-icons/tb";
+import PMImage from "../../assets/PMImage.png"
+import HRImage from "../../assets/HRImage.png"
+import IWImage from "../../assets/IWImage.png"
+import AFImage from "../../assets/AFImage.png"
+import ReportImage from "../../assets/ReportImage.png"
+import SalesImage from "../../assets/SalesImage.png"
 
 const ProductsSection = () => {
   const products = [
     {
-      icon: Package,
+      icon: TbShoppingCartCopy,
       title: "Product Management",
-      description: "Streamline your product lifecycle from concept to delivery with our comprehensive management tools.",
-      gradient: "from-blue-500 to-cyan-500"
+      image: PMImage
     },
     {
-      icon: DollarSign,
+      icon: FaCalculator,
       title: "Accounting & Finance",
-      description: "Manage your finances with precision using our advanced accounting and financial management solutions.",
-      gradient: "from-green-500 to-emerald-500"
+      image: AFImage
+
     },
     {
-      icon: Users,
+      icon: VscGraph,
       title: "Sales & CRM",
-      description: "Build stronger customer relationships and boost sales with our intelligent CRM platform.",
-      gradient: "from-purple-500 to-pink-500"
+      image: SalesImage
+
     },
     {
-      icon: Warehouse,
+      icon: TbBuildingWarehouse,
       title: "Inventory & Warehouse",
-      description: "Optimize your inventory management and warehouse operations for maximum efficiency.",
-      gradient: "from-orange-500 to-red-500"
+      image: IWImage
+
     },
     {
-      icon: User,
+      icon: TbUsersGroup,
       title: "HR & Payroll",
-      description: "Simplify human resources management and payroll processing with our integrated solutions.",
-      gradient: "from-indigo-500 to-blue-500"
+      image: HRImage
+
     },
     {
       icon: BarChart3,
       title: "Report & Analytics",
-      description: "Make data-driven decisions with comprehensive reporting and advanced analytics capabilities.",
-      gradient: "from-teal-500 to-green-500"
+      image: ReportImage
+
     }
   ];
 
   return (
-    <section id="products" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-background to-secondary/30">
+    <section id="products" className="py-16 sm:py-20 lg:py-16 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/20 dark:bg-none">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-display-md xl:text-display-lg font-bold mb-4">
             Our <span className="text-primary">Products</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Modular and Platforms
+            Modular <span className="text-primary text-bold">ERP</span> Platforms
           </p>
         </div>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {products.map((product, index) => (
-            <Card key={index} className="p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/20 group">
-              <div className="space-y-6">
-                <div className="relative">
-                  <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${product.gradient} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <product.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-                  </div>
-                  {/* Isometric effect */}
-                  <div className={`absolute -top-2 -right-2 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${product.gradient} opacity-20 rounded-2xl -z-10`}></div>
-                </div>
-                
-                <div className="space-y-3">
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {product.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                    {product.description}
-                  </p>
+            <Card
+              key={index}
+              className="flex flex-col justify-between px-6 pt-6 pb-0 sm:px-8 sm:pt-8 sm:pb-0 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/20 group"
+            >
+              {/* Top icon */}
+              <div className="relative">
+                <div className="w-6 h-6 sm:w-12 sm:h-12 bg-primary/30 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-primary">
+                  <product.icon className="w-4 h-4 sm:w-8 sm:h-8 text-blue-700" />
                 </div>
               </div>
+
+              {/* Title */}
+              <h3 className="text-lg sm:text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                {product.title}
+              </h3>
+
+              {/* Image pinned at bottom */}
+              <img src={product.image} alt="" className="self-center mt-auto" />
             </Card>
+
           ))}
         </div>
       </div>

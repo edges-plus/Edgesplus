@@ -1,12 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import PurchaseManagement from './PurchaseGraph'
+import MonthlyActivityCard from './MonthlyActivityCard'
+import ViewsByCountryCard from './ViewsByCountryCard'
+import StatisticsCard from './StatisticsCard'
 
 const HeroSection = () => {
   return (
-    <section className="h-auto lg:h-screen flex flex-col lg:flex-row">
+    <section className="h-auto lg:h-screen flex flex-col lg:flex-row pl-20">
       {/* Left half */}
-      <div className="w-full lg:w-1/2 h-64 lg:h-full flex items-center justify-center">
-        <div className="text-left max-w-lg">
+      <div className="w-full lg:w-1/2 h-64 lg:h-full flex items-center justify-start">
+        <div className="text-left max-w-lg ">
           {/* Headings */}
           <h1
             className="text-4xl lg:text-6xl font-semibold leading-tight mb-4"
@@ -32,26 +36,35 @@ const HeroSection = () => {
 
           {/* Contact Button */}
           <Button
-            className="bg-[#006BD6] text-base text-white flex items-center gap-2 px-6 py-6 rounded-md transition-colors"
+            className="bg-primary text-base text-white flex items-center gap-2 px-6 py-6 rounded-md transition-colors"
           >
             Contact <ArrowUpRight className="w-5 h-5" />
           </Button>
-
-
         </div>
       </div>
 
       {/* Right half */}
       <div
-        className="w-full lg:w-1/2 h-64 lg:h-full flex items-center justify-center"
-        style={{
-          background: "radial-gradient(circle, #F6F7F8 0%, #EBF5FF 100%)",
-        }}
+        className="w-full lg:w-1/2 h-full lg:h-full rounded-2xl flex flex-col items-center justify-center p-4 gap-4 overflow-hidden bg-[radial-gradient(circle,rgba(246,247,248,0.4)_0%,rgba(235,245,255,1)_100%)] dark:bg-[radial-gradient(circle,rgba(12,26,39,0.4)_0%,rgba(12,26,39,08)_100%)]"
+       
       >
-        <h1 className="text-foreground dark:text-white text-3xl lg:text-5xl font-bold">
-          Right Side
-        </h1>
+        {/* Cards container */}
+        {/* Cards container */}
+        <div className="grid grid-cols-2 gap-6 flex items-center justify-center ">
+          {[PurchaseManagement,ViewsByCountryCard, StatisticsCard,MonthlyActivityCard].map(
+            (Component, i) => (
+              <div
+                key={i}
+                className="bg-white dark:bg-transparent flex items-center justify-center rounded-2xl shadow-[0px_1.81px_5.42px_0px_rgba(13,10,44,0.08)]  w-auto h-auto"
+              >
+                <Component />
+              </div>
+            )
+          )}
+        </div>
+
       </div>
+
     </section>
   );
 };
