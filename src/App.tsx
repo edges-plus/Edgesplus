@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-
+import Header from "./components/Header";
+import PurchaseManagement from "./components/PurchaseGraph";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -16,10 +17,14 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <Header />
+
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
+            <Route path="/chart" element={<PurchaseManagement />} />
+
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

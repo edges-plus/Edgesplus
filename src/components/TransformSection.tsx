@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
 
 const TransformSection = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/20">
+    <section className="py-16 sm:py-20 lg:py-24 dark:bg-[linear-gradient(180deg,rgba(0,0,0,0.4)_0%,rgba(0,107,214,0.1)_100%)]">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center max-w-4xl mx-auto space-y-6 sm:space-y-8">
           <h2 className="text-3xl sm:text-4xl lg:text-display-md xl:text-display-lg font-bold leading-tight">
@@ -17,7 +18,9 @@ const TransformSection = () => {
           </p>
           
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-4 sm:py-6">
-            Contact Us
+            Contact Us <ArrowUpRight className="w-6 h-6 sm:w-7 sm:h-7" />
+
+
           </Button>
         </div>
       </div>
