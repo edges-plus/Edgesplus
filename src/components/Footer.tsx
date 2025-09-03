@@ -32,8 +32,8 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaFacebook, href: '#', label: 'Facebook' },
     { icon: FaXTwitter, href: '#', label: 'Twitter' },
-    { icon: FaInstagram, href: '#', label: 'Instagram' },
-    { icon: FaLinkedin, href: '#', label: 'LinkedIn' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/edgesplus/#', label: 'Instagram' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/company/edgesplus/', label: 'LinkedIn' },
   ];
 
   return (
