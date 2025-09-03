@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Logo from '../../assets/Logo.png';
-import LogoDark from '../../assets/LogoDark.png';
+import Logo from '../../assets/Logo.svg';
+import LogoDark from '../../assets/LogoDark.svg';
 import SunIcon from "../../assets/Sun.svg";
 import MoonIcon from "../../assets/Moon.svg";
 import { useTheme } from "@/contexts/ThemeContext";
