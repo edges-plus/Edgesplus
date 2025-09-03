@@ -27,7 +27,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, pay
       fill="hsl(var(--foreground))"
       textAnchor="middle"
       dominantBaseline="central"
-      fontSize="10"
+      fontSize="8"
       fontWeight="600"
     >
       {payload.percentage}%
@@ -67,6 +67,7 @@ const MonthlyActivityCard = () => {
                 cornerRadius={4}
                 labelLine={false}
                 label={renderCustomizedLabel}
+                stroke="none" // ✅ removes outline color
               >
                 {data.map((entry, index) => (
                   <Cell

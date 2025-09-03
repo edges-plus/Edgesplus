@@ -5,7 +5,7 @@ import BuildEdgeSection from "@/components/BuildEdgeSection";
 import CoreValuesSection from "@/components/CoreValuesSection";
 import TechStackSection from "@/components/TechStackSection";
 import ProductsSection from "@/components/ProductsSection";
-import TeamSection from "@/components/TeamSection";
+//import TeamSection from "@/components/TeamSection";
 import TransformSection from "@/components/TransformSection";
 import Footer from "@/components/Footer";
 
@@ -18,7 +18,7 @@ const Index = () => {
       <CoreValuesSection />
       <TechStackSection />
       <ProductsSection />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <TransformSection />
       <Footer />
     </div>
