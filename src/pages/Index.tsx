@@ -20,7 +20,6 @@ const Index = () => {
       <ProductsSection />
       {/* <TeamSection /> */}
       <TransformSection />
-      <Footer />
     </div>
   );
 };
