@@ -63,18 +63,19 @@ const Header = () => {
             </a>
           ))}
 
-          {/* Theme toggle for desktop */}
-          <button
-            onClick={toggleTheme}
-            className="h-auto w-auto flex items-center justify-center p-2 rounded-full transition-all duration-300"
-          >
-            {isDark ? (
-              <img src={SunIcon} alt="Sun" className="w-7 h-7 transition-transform duration-300 rotate-180" />
-            ) : (
-              <img src={MoonIcon} alt="Moon" className="w-6 h-6 transition-transform duration-200 rotate-0" />
-            )}
-          </button>
+
         </nav>
+        {/* Theme toggle for desktop */}
+        <button
+          onClick={toggleTheme}
+          className="hidden lg:block h-auto w-auto flex items-center justify-center p-2 rounded-full transition-all duration-300"
+        >
+          {isDark ? (
+            <img src={SunIcon} alt="Sun" className="w-7 h-7 transition-transform duration-300 rotate-180" />
+          ) : (
+            <img src={MoonIcon} alt="Moon" className="w-6 h-6 transition-transform duration-200 rotate-0" />
+          )}
+        </button>
 
         {/* Mobile controls */}
         <div className="flex items-center space-x-2 lg:hidden">
