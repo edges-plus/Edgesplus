@@ -43,7 +43,7 @@ const Header = () => {
     { title: "Services", href: "/page-not-found" },
     { title: "Careers", href: "/page-not-found" },
     { title: "Clients", href: "/page-not-found" },
-    { title: "Contact Us", href: "/page-not-found" },
+    { title: "Contact Us", href: "/contact" },
   ];
 
   return (
