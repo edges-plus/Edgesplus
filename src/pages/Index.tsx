@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import LogoSection from "@/components/LogoSection";
 import BuildEdgeSection from "@/components/BuildEdgeSection";
