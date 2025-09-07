@@ -2,8 +2,11 @@ import { Card } from "@/components/ui/card";
 import SWCircles from "../../assets/SWCircles.png";
 import NECircles from "../../assets/NECircles.png";
 
+interface HeaderProps{
+    title: string;
+}
 
-const ContactHeader = () => {
+const PageHeader: React.FC<HeaderProps> = ({title}) => {
     return (
         <section className=" px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
@@ -21,7 +24,7 @@ const ContactHeader = () => {
                                 WebkitTextFillColor: "transparent",
                             }}
                         >
-                            Contact Us
+                            {title}
                         </h1>
 
                     </div>
@@ -35,4 +38,4 @@ const ContactHeader = () => {
         </section>
     )
 }
-export default ContactHeader;
+export default PageHeader;
