@@ -16,11 +16,11 @@ const Footer = () => {
   }, [theme]);
   const navigationLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Products', href: '/page-not-foud' },
+    { name: 'About Us', href: '/about' },
     { name: 'Service', href: '/page-not-foud' },
     { name: 'Careers', href: '/page-not-foud' },
     { name: 'About Us', href: '/page-not-foud' },
-    { name: 'Contact', href: '/page-not-foud' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   const socialLinks = [

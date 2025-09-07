@@ -173,7 +173,7 @@ const ContactForm = () => {
                             <img
                                 src={Circles}
                                 alt="Decorative Circles"
-                                className="absolute w-128 bottom-0 right-0  pointer-events-none"
+                                className="absolute hidden lg:block w-128 bottom-0 right-0  pointer-events-none"
                             />
                         </div>
 
