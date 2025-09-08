@@ -27,7 +27,9 @@ const Footer = () => {
     { icon: FaFacebook, href: '#', label: 'Facebook' },
     { icon: FaXTwitter, href: '#', label: 'Twitter' },
     { icon: FaInstagram, href: 'https://www.instagram.com/edgesplus/#', label: 'Instagram' },
+
     { icon: FaLinkedin, href: 'https://www.linkedin.com/company/edgesplus/', label: 'LinkedIn' },
+
   ];
 
   return (
