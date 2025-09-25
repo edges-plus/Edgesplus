@@ -45,7 +45,7 @@ const LeadershipSection = () => {
           >
             {/* Profile Image */}
             <div className="flex-shrink-0">
-              <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-orange-400/20 to-amber-600/20">
+              <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-black-400/20 to-black-600/20">
                 <img
                   src={leader.image}
                   alt={`${leader.name} - ${leader.title}`}
@@ -54,7 +54,7 @@ const LeadershipSection = () => {
                     e.currentTarget.style.display = "none";
                     const fallback = document.createElement("div");
                     fallback.className =
-                      "w-40 h-40 bg-gradient-to-br from-orange-400/20 to-amber-600/20 flex items-center justify-center rounded-full";
+                      "w-40 h-40 bg-gradient-to-br from-black-400/20 to-black-600/20 flex items-center justify-center rounded-full";
                     fallback.innerHTML = `
                       <span class="text-3xl font-bold text-primary">${leader.name.charAt(
                         0
@@ -68,7 +68,7 @@ const LeadershipSection = () => {
 
             {/* Content */}
             <div className="flex-1 flex flex-col justify-center text-center md:text-left">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-400 mb-4">
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-500 mb-4">
                 {leader.name}
               </h3>
 
