@@ -1,5 +1,5 @@
 import HeroSection from "@/components/HeroSection";
-import LogoSection from "@/components/LogoSection";
+//import LogoSection from "@/components/LogoSection";
 import BuildEdgeSection from "@/components/BuildEdgeSection";
 import CoreValuesSection from "@/components/CoreValuesSection";
 import TechStackSection from "@/components/TechStackSection";
@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen p-4 pt-48 lg:pt-24">
       <HeroSection />
-      <LogoSection />
+      {/* <LogoSection /> */}
       <BuildEdgeSection />
       <CoreValuesSection />
       <TechStackSection />

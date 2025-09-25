@@ -26,7 +26,7 @@ const App = () => (
             <Route path="/about" element={<AboutPage />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="/page-not-foud" element={<NotFound />} />
+            <Route path="/page-not-found" element={<NotFound />} />
           </Routes>
           <Footer/>
         </BrowserRouter>
