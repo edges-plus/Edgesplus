@@ -89,7 +89,7 @@ const ContactForm = () => {
                                         </Select>
                                         <Input
                                             id="phone"
-                                            placeholder="7356226479"
+                                            placeholder="123456789"
                                             value={formData.phone}
                                             onChange={(e) => handleInputChange("phone", e.target.value)}
                                             className="flex-1 rounded-2xl border border-[#A6A6A6] bg-background/50 h-12"
@@ -132,7 +132,7 @@ const ContactForm = () => {
                                         <p className="text-foreground">info@edgesplus.com</p>
                                     </div>
 
-                                    <div className="flex items-start gap-3">
+                                    {/*<div className="flex items-start gap-3">
                                         <div className="w-full flex gap-x-10">
                                             <div className="flex gap-x-2">
                                                 <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
@@ -145,7 +145,7 @@ const ContactForm = () => {
 
                                         </div>
 
-                                    </div>
+                                    </div>*/}
 
                                     <div className="space-y-6">
                                         <div className="flex items-start gap-3">
