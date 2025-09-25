@@ -17,15 +17,15 @@ const Footer = () => {
   const navigationLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
-    { name: 'Service', href: '/page-not-foud' },
-    { name: 'Careers', href: '/page-not-foud' },
-    { name: 'About Us', href: '/page-not-foud' },
+    { name: 'Service', href: '/NotFound' },
+    { name: 'Careers', href: '/NotFound' },
+    { name: 'Clients', href: '/NotFound' },
     { name: 'Contact', href: '/contact' },
   ];
 
   const socialLinks = [
     { icon: FaFacebook, href: '#', label: 'Facebook' },
-    { icon: FaXTwitter, href: '#', label: 'Twitter' },
+    { icon: FaXTwitter, href: 'https://x.com/edgesplus', label: 'Twitter' },
     { icon: FaInstagram, href: 'https://www.instagram.com/edgesplus/#', label: 'Instagram' },
 
     { icon: FaLinkedin, href: 'https://www.linkedin.com/company/edgesplus/', label: 'LinkedIn' },
