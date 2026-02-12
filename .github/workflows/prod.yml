@@ -21,16 +21,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build CRA app
+      - name: Build Vite app
         run: npm run build
 
-      - name: Copy build folder to EC2
+      - name: Copy dist folder to EC2
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.EC2_DEV_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_DEV_KEY }}
           port: 22
-          source: "build/*"
+          source: "dist/*"
           target: "/var/www/html/bluecat"
           strip_components: 1
